@@ -63,6 +63,15 @@ namespace UserRegistrationProblem
             else
                 Console.WriteLine(ucPassword + " is Invalid");
         }
+        //For Numeric Password
+        public void validateNumericPassword(string NumericPassword)
+        {
+            string stringForNumericPassword = "^.{8,}?";
+            if (Regex.IsMatch(NumericPassword, stringForNumericPassword))
+                Console.WriteLine(NumericPassword + " is Valid");
+            else
+                Console.WriteLine(NumericPassword + " is Invalid");
+        }
     }
 
 }
